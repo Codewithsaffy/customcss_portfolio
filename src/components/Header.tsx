@@ -1,15 +1,30 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { FaTimes } from 'react-icons/fa'
+import { IoMenu } from 'react-icons/io5'
 
 const Header = () => {
+  const [visible , setVisible] = useState(true)
+  const ref = useRef<HTMLElement>(null)
   return (
     <header className="header">
         <Link href="#" className="logo">
           Portfolio
         </Link>
-        <i className="bx bx-menu" id="menu-icon"></i>
+{
+  visible ? <FaTimes className='menu-icon icon-size' onClick={()=>{
+    ref.current!.style.display = "none"
+    setVisible(false)
+  }} /> :         <IoMenu className='menu-icon icon-size' onClick={()=>{
+    ref.current!.style.display = "flex"
+    setVisible(true)
+  }}/>
+}
 
-        <nav className="navbar">
+        
+
+        <nav ref={ref} className="navbar">
           <Link href="#home" className="active">
             Home
           </Link>

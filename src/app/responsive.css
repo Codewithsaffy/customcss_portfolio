@@ -33,7 +33,7 @@
   #menu-icon {
     display: block;
   }
-  .navebar {
+  header nav {
     position: absolute;
     top: 100%;
     left: 0;
@@ -43,14 +43,18 @@
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     display: none;
+    flex-direction: column;
   }
-  .navebar.active {
+  .icon-size{
+    font-size: 20px;
+  }
+  header nav.active {
     display: block;
   }
-  .navebar a {
+  header nav a {
     display: block;
     font-size: 2rem;
-    margin: 3rem 0;
+    /* margin: 3rem 0; */
   }
   .home {
     flex-direction: column;
