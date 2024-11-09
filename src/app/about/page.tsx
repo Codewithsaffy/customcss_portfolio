@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="about" id="about">
+    <section className="about">
         <div className="about-img">
           <img  src="/about.png" alt="" />
         </div>

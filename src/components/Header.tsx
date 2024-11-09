@@ -33,13 +33,13 @@ const Header = () => {
       )}
 
       <nav ref={ref} className="navbar">
-        <Link href="#home" className="active">
+        <Link href="/" className="active">
           Home
         </Link>
-        <Link href="#about">About</Link>
-        <Link href="#services">Services</Link>
-        <Link href="#projects">Portfolio</Link>
-        <Link href="#contact">Contact</Link>
+        <Link href="/about">About</Link>
+        <Link href="/services">Services</Link>
+        <Link href="/projects">Portfolio</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
     </header>
   );
